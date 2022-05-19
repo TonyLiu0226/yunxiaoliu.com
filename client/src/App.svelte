@@ -1,7 +1,7 @@
 <script>
 	let num = -1;
-	const names = ["Aniruddha Kashyap", "Nolan Breen", "Matthew Johnson", "Cindy Li", "Kat Evers",
-"Alex Hussain", "Edwina Ng", "Albert Cheng", "Jade Henzie", "Smol pp", "nigga"]
+	const names = ["XQC", "Dream", "SkyDoesMinecraft", "TechLead", "JomaTech",
+"Snoop Dogg", "IDUBBBZTV", "Cookiezi", "Vaxei", "Bruh"]
 	function getRand() {
 		fetch ("./rand")
 		.then(d => d.text())
