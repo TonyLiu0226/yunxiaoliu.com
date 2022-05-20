@@ -3,10 +3,13 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	background-image: url("https://d30xqvs6b65d10.cloudfront.net/wp-content/uploads/2020/12/Cyberpunk-2077-endings-guide-all-endings-and-epilogues-2-Panam-3b.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 body {
-	color: #333;
+	color:#fff;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
