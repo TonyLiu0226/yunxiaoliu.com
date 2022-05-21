@@ -96,19 +96,19 @@
       </div>
       <ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
       <li>
-        <button class="btn"><i class="fa fa-home" on:click={h}></i></button>
+        <button class={`button${home ? '  active' : ''}`} on:click={h}><i class="fa fa-home"></i></button>
       </li>
       <li>
-        <button on:click={p}>Projects</button>
+        <button on:click={p} class={`button${projects ? '  active' : ''}`}>Projects</button>
       </li>
       <li>
-        <button on:click={n}>Notes</button>
+        <button on:click={n} class={`button${notes ? '  active' : ''}`}>Notes</button>
       </li>
       <li>
-        <button on:click={ph}>Photos</button>
+        <button on:click={ph} class={`button${photos ? '  active' : ''}`}>Photos</button>
       </li>
       <li>
-        <button on:click={b}>Blogs</button>
+        <button on:click={b} class={`button${blogs ? '  active' : ''}`}>Blogs</button>
       </li>
       </ul>
     </div>
@@ -234,13 +234,17 @@
         padding: 0;
       }
 
-      button {
+      .button {
         display: inline-flex;
         background-color: rgba(7, 74, 17, 0.8);
         color: #fff;
         height: 100%;
         cursor:pointer;
         border:none;
+      }
+
+      .button.active {
+        background-color: navy;
       }
     }
   </style>

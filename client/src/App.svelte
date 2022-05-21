@@ -1,5 +1,6 @@
 <script>
 	import Navbar from "./components/nav.svelte";
+	import Home from "./home.svelte";
 	import {isHome, isProjects, isNotes, isPhotos, isBlogs } from "./stores.js";
 	let num = -1;
 	const names = ["XQC", "Dream", "SkyDoesMinecraft", "TechLead", "JomaTech",
@@ -34,6 +35,9 @@
 		<Navbar></Navbar>
 	</div>
 	{#if home}
+		<div class="homepg">
+			<Home></Home>
+		</div>
 		<p>Hello {num}!</p>
 		<button on:click={getRand}>Get a random number</button>
 	{/if}
@@ -70,7 +74,7 @@
 <style>
 	main {
 		text-align: center;
-		max-width: 240px;
+		max-width: 480px;
 		margin: 0 auto;
 
 	}
@@ -91,5 +95,10 @@
 	.nav {
 		top:0px;
 		position:sticky;
+	}
+
+	.homepg {
+		align-items:center;
+		width: 100%;
 	}
 </style>
