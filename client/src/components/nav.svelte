@@ -246,5 +246,9 @@
       .button.active {
         background-color: navy;
       }
+
+      button.hover {
+        background-color: navy;
+      }
     }
   </style>

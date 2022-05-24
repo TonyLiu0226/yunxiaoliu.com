@@ -1,8 +1,17 @@
 <script>
-
+    import { onMount } from 'svelte';
+    import anime from 'animejs';
+    import { fade, slide, scale } from 'svelte/transition';
+    anime({
+        targets: '.square',
+        translatex: 250,
+        rotateZ: 360,
+        duration: 5000,
+        loop: true
+    });
 </script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<div class='card'>
+<div transition:fade class='card'>
     <div class="about-me">
         <h1>Yunxiao Liu</h1>
         <div class="flex">
@@ -22,12 +31,14 @@
         </div>
     </div>
 </div>
-<div class='card'>
+<div transition:fade class='card'>
     <div class="contact">
         <div class="flex">
             <div class="resume">
                 <h1>My Resume:</h1>
-                <img src="https://lh3.googleusercontent.com/a-/AOh14Ghp-NOXwc_8kDyCBfR-NGWyKr2Evcrvu2B0DBXJjA=s96-c-rg-br100" alt="pfp" width=100%/>
+                <div class="btn-row">
+                    <a class="resbutton" href="https://drive.google.com/file/d/1NVbkS19h9TuKVyNIhkp1MdNBIe0BNJAJ/view?usp=sharing">RESUME</a>
+                </div>
             </div>
             <div class="socials">
                 <h1>CONTACT ME</h1>
@@ -42,6 +53,11 @@
     </div>
 </div>
 
+<div class="demo-wrapper">
+    <div class="square">
+        <p>Gay</p>
+    </div>
+</div>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@300&family=Ubuntu:wght@300;400&display=swap');
 
@@ -58,7 +74,13 @@
     padding-bottom: 10px;
     margin-top: 20px;
     margin-bottom: 40px;
+    transition: transform 500ms ease-in-out;
 }
+
+.card:hover {
+    transform:translateY(-20px);
+}
+
 h1{
     font-family: 'Ubuntu', sans-serif;
     font-size: 36px;

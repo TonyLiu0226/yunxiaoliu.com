@@ -2,6 +2,7 @@
 	import Navbar from "./components/nav.svelte";
 	import Home from "./home.svelte";
 	import {isHome, isProjects, isNotes, isPhotos, isBlogs } from "./stores.js";
+	import { fade, slide, scale } from 'svelte/transition';
 	let num = -1;
 	const names = ["XQC", "Dream", "SkyDoesMinecraft", "TechLead", "JomaTech",
 "Snoop Dogg", "IDUBBBZTV", "Cookiezi", "Vaxei", "Bruh"];
@@ -42,18 +43,21 @@
 		<button on:click={getRand}>Get a random number</button>
 	{/if}
 	{#if projects}
-		<h1>LIST OF PROJECTS:</h1>
-		<br>
-		<ul>
-			<li>Rickyboi</li>
-			<li>Simple FPGA RISC MACHINE</li>
-			<li>Tahsin Hasan's CPEN 212 Note Transcriber</li>
-			<li>UniMeetups</li>
-			<li>Shopinder</li>
-			<li>Virtuagnosis</li>
-		</ul>
+		<div in:slide out:fade>
+			<h1>LIST OF PROJECTS:</h1>
+			<br>
+			<ul>
+				<li>Rickyboi</li>
+				<li>Simple FPGA RISC MACHINE</li>
+				<li>Tahsin Hasan's CPEN 212 Note Transcriber</li>
+				<li>UniMeetups</li>
+				<li>Shopinder</li>
+				<li>Virtuagnosis</li>
+			</ul>
+		</div>
 	{/if}
 	{#if notes}
+	<div in:slide out:fade>
 		<h1>LIST OF COURSES:</h1>
 		<br>
 		<ul>
@@ -62,12 +66,17 @@
 			<li>CPEN 221</li>
 			<li>STAT 302</li>
 		</ul>
+	</div>
 	{/if}
 	{#if photos}
+	<div in:slide out:fade>
 		<img src="https://i.ytimg.com/vi/YDj3JHtIviQ/maxresdefault.jpg" alt="sus"/>
+	</div>
 	{/if}
 	{#if blogs}
+	<div transition:fade>
 		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MY BLOGS</a>
+	</div>
 	{/if}
 </main>
 
