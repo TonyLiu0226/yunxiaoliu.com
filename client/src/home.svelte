@@ -40,16 +40,16 @@
             <div class="resume">
                 <h1>My resume:</h1>
                 <div class="btn-row">
-                    <a href="https://drive.google.com/file/d/1NVbkS19h9TuKVyNIhkp1MdNBIe0BNJAJ/view?usp=sharing"><i class="fa fa-file"></i></a>
+                    <a href="https://drive.google.com/file/d/1NVbkS19h9TuKVyNIhkp1MdNBIe0BNJAJ/view?usp=sharing" target="_blank"><i class="fa fa-file"></i></a>
                 </div>
             </div>
             <div class="socials">
                 <h1>CONTACT ME</h1>
                 <div class="btn-row">
-                <a href="https://www.linkedin.com/in/yunxiaotonyliu/"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/TonyLiu0226"><i class="fa fa-github"></i></a>
-                <a href="https://www.instagram.com/tony_26l/?hl=en/"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCYLZDU2vS-FeL1E2YaWrG3w"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/yunxiaotonyliu/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/TonyLiu0226" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.instagram.com/tony_26l/?hl=en/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCYLZDU2vS-FeL1E2YaWrG3w" target="_blank"><i class="fa fa-youtube"></i></a>
                 
                 </div>
             </div>
@@ -93,11 +93,6 @@
 .card:hover {
     transform:translateY(-20px);
     transform:scale(105%);
-}
-
-.card:hover > .lines {
-    animation: dash 5s linear alternate infinite;
-    color:green;
 }
 
 h1{
