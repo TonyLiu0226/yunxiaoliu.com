@@ -1,6 +1,7 @@
 <script>
 	import Navbar from "./components/nav.svelte";
 	import Home from "./home.svelte";
+	import Projects from "./projects.svelte"
 	import {isHome, isProjects, isNotes, isPhotos, isBlogs } from "./stores.js";
 	import { fade, slide, scale } from 'svelte/transition';
 	let num = -1;
@@ -43,17 +44,8 @@
 		<button on:click={getRand}>Get a random number</button>
 	{/if}
 	{#if projects}
-		<div in:slide out:fade>
-			<h1>LIST OF PROJECTS:</h1>
-			<br>
-			<ul>
-				<li>Rickyboi</li>
-				<li>Simple FPGA RISC MACHINE</li>
-				<li>Tahsin Hasan's CPEN 212 Note Transcriber</li>
-				<li>UniMeetups</li>
-				<li>Shopinder</li>
-				<li>Virtuagnosis</li>
-			</ul>
+		<div class="projects">
+			<Projects></Projects>
 		</div>
 	{/if}
 	{#if notes}
