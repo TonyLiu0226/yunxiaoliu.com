@@ -62,7 +62,7 @@
 	{/if}
 	{#if photos}
 	<div in:slide out:fade>
-		<img src="https://i.ytimg.com/vi/YDj3JHtIviQ/maxresdefault.jpg" alt="sus"/>
+		<img src="https://i.ytimg.com/vi/YDj3JHtIviQ/maxresdefault.jpg" width=100% alt="sus"/>
 	</div>
 	{/if}
 	{#if blogs}

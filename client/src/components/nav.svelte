@@ -226,7 +226,7 @@
       background-color:#fff;
     }
   
-    @media only screen and (min-width: 767px) {
+    @media only screen and (min-width: 480px) {
       .mobile-icon {
         display: none;
       }
@@ -253,4 +253,21 @@
         background-color: navy;
       }
     }
+
+    .button {
+        display: inline-flex;
+        background-color: rgba(7, 74, 17, 0.8);
+        color: #fff;
+        height: 100%;
+        cursor:pointer;
+        border:none;
+      }
+
+      .button.active {
+        background-color: navy;
+      }
+
+      button.hover {
+        background-color: navy;
+      }
   </style>
