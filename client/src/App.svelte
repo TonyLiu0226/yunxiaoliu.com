@@ -94,12 +94,14 @@
 		.nav {
 		top:0px;
 		position:sticky;
+		z-index:1;
 		}
 	}
 
 	.nav {
 		top:0px;
 		position:sticky;
+		z-index:1;
 	}
 
 	.homepg {
