@@ -183,12 +183,14 @@
   
     .mobile-icon.active:before,
     .mobile-icon.active:after {
-      top: 50%;
-      transform: rotate(-45deg);
+      top:30%;
+      transform:scale(50%);
+      transform: rotate(60deg);
     }
   
     .mobile-icon.active .middle-line {
-      transform: rotate(45deg);
+      transform: scale(47.5%);
+      transform: rotate(-60deg);
     }
   
     .navbar-list {
