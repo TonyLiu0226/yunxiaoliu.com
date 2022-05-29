@@ -76,7 +76,6 @@
 	main {
 		text-align: center;
 		max-width: 480px;
-		margin: 0 auto;
 
 	}
 
@@ -87,9 +86,14 @@
 		font-weight: 100;
 	}
 
-	@media (min-width: 640px) {
+	@media (min-width: 480px) {
 		main {
 			max-width: none;
+		}
+
+		.nav {
+		top:0px;
+		position:sticky;
 		}
 	}
 
