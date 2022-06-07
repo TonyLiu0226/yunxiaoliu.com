@@ -64,7 +64,17 @@
             </div>
         </div>
         <!-- insert try out links here (github, devpost, youtube demos) -->
-        <a href="https://github.com/TonyLiu0226/note_transcriber" target="_blank"><i class="fa fa-github"></i></a>
+        <svg viewbox="0 0 100 1">
+            <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="red" stroke-dasharray=70 stroke-width=0.15/>
+        </svg>
+        <div class="tryout">
+            <a href="https://github.com/TonyLiu0226/note_transcriber" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+        <svg viewbox="0 0 100 1">
+            <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="purple" stroke-dasharray=70 stroke-width=0.15/>
+        </svg>
+        <h3>IMAGE GALLERY</h3>
+
     </div>
 </div>
 
@@ -144,12 +154,20 @@ a {
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 a:hover {
     background-color:blue;
     color:#fff;
+}
+
+.tryout {
+    display:flex;
+    margin-top:5px;
+    margin-bottom:15px;
+    align-items:center;
+    justify-content:space-evenly;
 }
 
 </style>

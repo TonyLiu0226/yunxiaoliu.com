@@ -219,6 +219,22 @@ img {
     font-size: 15px;
     line-height: 1.6;
     }
+
+    .card {
+    background-color:rgba(8,8,8,0.5);
+    border:5px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transition: transform 0ms ease-in-out;
+}
 }
 
 </style>
