@@ -201,6 +201,7 @@ img {
         margin-left:5%;
         margin-right:5%;
         width:90%;
+        margin-bottom:10px;
     }
 
     .socials {
