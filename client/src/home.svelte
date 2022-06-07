@@ -235,7 +235,11 @@ img {
     margin-top: 20px;
     margin-bottom: 40px;
     transition: transform 0ms ease-in-out;
-}
+    }
+.card:hover {
+    transform:translateY(0px);
+    transform:scale(100%);
+    }
 }
 
 </style>
