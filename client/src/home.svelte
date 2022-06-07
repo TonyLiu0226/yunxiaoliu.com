@@ -9,7 +9,10 @@
         duration: 5000,
         loop: true
     });
+    let y = 0;
 </script>
+
+<svelte:window bind:innerWidth={y}/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <div transition:fade class='card'>
     <div class="about-me">
@@ -38,13 +41,18 @@
     <div class="contact">
         <div class="flex">
             <div class="resume">
-                <h1>My resume:</h1>
+                <h1>My resume</h1>
                 <div class="btn-row">
                     <a href="https://drive.google.com/file/d/1NVbkS19h9TuKVyNIhkp1MdNBIe0BNJAJ/view?usp=sharing" target="_blank"><i class="fa fa-file"></i></a>
                 </div>
             </div>
+            {#if y <= 600}
+            <svg viewbox="0 0 100 1">
+                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal" stroke-dasharray=100 stroke-width=0.2/>
+            </svg>
+            {/if}
             <div class="socials">
-                <h1>CONTACT ME</h1>
+                <h1>Contact Me</h1>
                 <div class="btn-row">
                 <a href="https://www.linkedin.com/in/yunxiaotonyliu/" target="_blank"><i class="fa fa-linkedin"></i></a>
                 <a href="https://github.com/TonyLiu0226" target="_blank"><i class="fa fa-github"></i></a>
@@ -74,6 +82,11 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@300&family=Ubuntu:wght@300;400&display=swap');
 
+.image {
+    width: 25%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
 .card {
     background-color:rgba(8,8,8,0.5);
     border:5px;
@@ -97,19 +110,13 @@
 
 h1{
     font-family: 'Ubuntu', sans-serif;
-    font-size: 36px;
+    font-size: clamp(32px, 4vw, 48px);
 }
 
 p{
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     line-height: 1.6;
-}
-
-.image {
-    width: 25%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
 }
 
 .resume {
@@ -170,6 +177,48 @@ img {
     display:block;
     margin-left:auto;
     margin-right:auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .flex {
+        display:flex;
+        flex-direction:column;
+    }
+
+    .image {
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+    }
+
+    .desc {
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+    }
+
+    .resume {
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+    }
+
+    .socials {
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+    }
+
+    h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: clamp(26px, 6vw, 36px);
+    }
+
+    p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    }
 }
 
 </style>

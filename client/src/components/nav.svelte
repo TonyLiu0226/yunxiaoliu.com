@@ -226,7 +226,7 @@
       background-color:#fff;
     }
   
-    @media only screen and (min-width: 480px) {
+    @media only screen and (min-width: 600px) {
       .mobile-icon {
         display: none;
       }
