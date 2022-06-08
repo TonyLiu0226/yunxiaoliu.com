@@ -2,9 +2,23 @@
     import { onMount } from 'svelte';
     import anime from 'animejs';
     import { fade, slide, scale } from 'svelte/transition';
+
+    let count = 0;
+    
+    const imageArray = ["https://i.kym-cdn.com/photos/images/newsfeed/001/023/007/f29.png", "https://static.wikia.nocookie.net/gtawiki/images/a/a9/LamarDavis-GTAV.png/revision/latest?cb=20150315005551",
+    "https://asset.vg247.com/gta_5_franklin_roast_real_life_grab_3.jpg/BROK/thumbnail/1200x1200/quality/100/gta_5_franklin_roast_real_life_grab_3.jpg",
+    "https://miro.medium.com/max/968/1*lW9PKeCq-VjYi_bo-P1g5A.png", "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"]
+    let image_size = imageArray.length;
+
+    function increment() {
+        count++;
+    }
+
+    function decrement() {
+        count--;
+    }
 </script>
 <!-- PROJECTS TO INCLUDE: Rickyboi, Simple FPGA RISC Machine, CPEN 212 Note Transcriber, UniMeetups, Shopinder, Virtuagnosis -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <div transition:fade class='card'>
     <div class="THC212NT">
         <h1>Tahsin Hasan's CPEN 212 Note Transcriber</h1>
@@ -74,6 +88,15 @@
             <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="purple" stroke-dasharray=70 stroke-width=0.15/>
         </svg>
         <h3>IMAGE GALLERY</h3>
+        <div class="gallery">
+            <img src={imageArray[count]} width=100% alt="bruh">
+            {#if count > 0}
+            <button class="btn-l" on:click={decrement}><i class="fa-solid fa-arrow-left"></i></button>
+            {/if}
+            {#if count < (image_size - 1)}
+            <button class="btn-r" on:click={increment}><i class="fa-solid fa-arrow-right"></i></button>
+            {/if}
+        </div>
 
     </div>
 </div>
@@ -170,4 +193,36 @@ a:hover {
     justify-content:space-evenly;
 }
 
+.gallery {
+    position:relative;
+    margin-left:2.5%;
+    margin-right:2.5%;
+    width:95%;
+}
+
+.btn-l {
+    position:absolute;
+    left:0;
+    height:100%;
+    width:20%;
+    background-color:transparent;
+    border:0px;
+}
+
+.btn-l:hover {
+    background-color:rgba(8, 8, 8, 0.4);
+}
+
+.btn-r {
+    position:absolute;
+    right:0;
+    height:100%;
+    width:20%;
+    background-color:transparent;
+    border:0px;
+}
+
+.btn-r:hover {
+    background-color:rgba(8, 8, 8, 0.4);
+}
 </style>
