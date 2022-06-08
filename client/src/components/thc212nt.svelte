@@ -225,4 +225,27 @@ a:hover {
 .btn-r:hover {
     background-color:rgba(8, 8, 8, 0.4);
 }
+
+@media only screen and (max-width: 600px) {
+    .card {
+    background-color:rgba(8,8,8,0.5);
+    border:5px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transition: transform 0ms ease-in-out;
+}
+
+.card:hover {
+    transform:translateY(0px);
+    transform:scale(100%);
+}
+}
 </style>
