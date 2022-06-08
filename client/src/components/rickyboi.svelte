@@ -92,7 +92,8 @@ li{
 }
 
 ul {
-    list-style:none;
+    list-style-type:none;
+    padding:0;
 }
 
 .flex {

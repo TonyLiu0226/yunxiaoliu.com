@@ -2,11 +2,13 @@
     import Rickyboi from './components/rickyboi.svelte';
     import THC212NT from './components/thc212nt.svelte';
     import SRM from './components/simple-risc-machine.svelte';
+    import UniMeetups from './components/unimeetups.svelte';
 </script>
 <div class="project-list">
 <Rickyboi></Rickyboi>
 <THC212NT></THC212NT>
 <SRM></SRM>
+<UniMeetups></UniMeetups>
 </div>
 
 <style>

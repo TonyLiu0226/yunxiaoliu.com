@@ -5,9 +5,10 @@
 
     let count = 0;
     
-    const imageArray = ["https://i.kym-cdn.com/photos/images/newsfeed/001/023/007/f29.png", "https://static.wikia.nocookie.net/gtawiki/images/a/a9/LamarDavis-GTAV.png/revision/latest?cb=20150315005551",
-    "https://asset.vg247.com/gta_5_franklin_roast_real_life_grab_3.jpg/BROK/thumbnail/1200x1200/quality/100/gta_5_franklin_roast_real_life_grab_3.jpg",
-    "https://miro.medium.com/max/968/1*lW9PKeCq-VjYi_bo-P1g5A.png", "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"]
+    const imageArray = [
+    "https://res.cloudinary.com/yuliu/image/upload/v1654651093/p2.5_xskkle.jpg", "https://res.cloudinary.com/yuliu/image/upload/v1654651093/p2.1_klwulq.jpg",
+    "https://res.cloudinary.com/yuliu/image/upload/v1654651093/p2.2_zlp7q7.jpg", "https://res.cloudinary.com/yuliu/image/upload/v1654651093/p2.4_gfpevm.jpg",
+    "https://res.cloudinary.com/yuliu/image/upload/v1654651093/p2.6_ciiux4.jpg"]
     let image_size = imageArray.length;
 
     function increment() {
@@ -148,7 +149,8 @@ li{
 }
 
 ul {
-    list-style:none;
+    list-style-type:none;
+    padding:0;
 }
 
 ol {
@@ -156,6 +158,7 @@ ol {
     font-size: 18px;
     line-height: 1.6;
     list-style:inside;
+    padding:0;
 }
 
 .flex {
