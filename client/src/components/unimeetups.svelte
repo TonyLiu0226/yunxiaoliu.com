@@ -5,7 +5,7 @@
 import { group_outros } from 'svelte/internal';
 </script>
 <!-- PROJECTS TO INCLUDE: Rickyboi, Simple FPGA RISC Machine, CPEN 212 Note Transcriber, UniMeetups, Shopinder, Virtuagnosis -->
-<div transition:fade class='card'>
+<div class='card'>
     <div class="THC212NT">
         <h1>UniMeetups</h1>
         <svg viewbox="0 0 100 1">
@@ -85,7 +85,6 @@ import { group_outros } from 'svelte/internal';
 
 .card:hover {
     transform:translateY(-20px);
-    transform:scale(105%);
 }
 
 h1{

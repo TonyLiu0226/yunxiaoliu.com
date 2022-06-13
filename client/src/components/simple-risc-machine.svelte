@@ -5,7 +5,7 @@
 </script>
 <!-- PROJECTS TO INCLUDE: Rickyboi, Simple FPGA RISC Machine, CPEN 212 Note Transcriber, UniMeetups, Shopinder, Virtuagnosis -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<div transition:fade class='card'>
+<div class='card'>
     <div class="simple-RISC-machine">
         <h1>Simple RISC Machine</h1>
         <svg viewbox="0 0 100 1">
@@ -62,7 +62,6 @@
 
 .card:hover {
     transform:translateY(-20px);
-    transform:scale(105%);
 }
 
 h1{

@@ -20,7 +20,7 @@
     }
 </script>
 <!-- PROJECTS TO INCLUDE: Rickyboi, Simple FPGA RISC Machine, CPEN 212 Note Transcriber, UniMeetups, Shopinder, Virtuagnosis -->
-<div transition:fade class='card'>
+<div class='card'>
     <div class="THC212NT">
         <h1>Tahsin Hasan's CPEN 212 Note Transcriber</h1>
         <svg viewbox="0 0 100 1">
@@ -123,7 +123,6 @@
 
 .card:hover {
     transform:translateY(-20px);
-    transform:scale(105%);
 }
 
 h1{

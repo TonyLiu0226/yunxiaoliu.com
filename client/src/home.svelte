@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import anime from 'animejs';
-    import { fade, slide, scale } from 'svelte/transition';
+    import Saos from "saos";
     anime({
         targets: '.square',
         translatex: 250,
@@ -14,7 +14,8 @@
 
 <svelte:window bind:innerWidth={y}/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<div transition:fade class='card'>
+<Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
+<div class='card'>
     <div class="about-me">
         <h1>Yunxiao Liu</h1>
         <svg viewbox="0 0 100 1">
@@ -37,7 +38,9 @@
         </div>
     </div>
 </div>
-<div transition:fade class='card'>
+</Saos>
+<Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
+<div class='card'>
     <div class="contact">
         <div class="flex">
             <div class="resume">
@@ -64,7 +67,8 @@
         </div>
     </div>
 </div>
-
+</Saos>
+<Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 <div class="card">
     <h1>LANGUAGES AND FRAMEWORKS</h1>
     <div class="languages">
@@ -79,8 +83,19 @@
         <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-mongodb/events/mon.png" width=33% alt="mongodb">
     </div>
 </div>
+</Saos>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@300&family=Ubuntu:wght@300;400&display=swap');
+@keyframes -global-fade-in {
+    0% {
+      transform: rotateY(-180deg) translateX(-100vw) skewX(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0deg) translateX(0) skewX(0deg);
+      opacity: 1;
+    }
+  }
 
 .image {
     width: 25%;
@@ -105,7 +120,6 @@
 
 .card:hover {
     transform:translateY(-20px);
-    transform:scale(105%);
 }
 
 h1{
