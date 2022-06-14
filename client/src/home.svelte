@@ -19,7 +19,7 @@
     <div class="about-me">
         <h1>Yunxiao Liu</h1>
         <svg viewbox="0 0 100 1">
-            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal" stroke-dasharray=100 stroke-width=0.2/>
+            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
         </svg>
         <div class="flex">
             <div class="image">
@@ -51,7 +51,7 @@
             </div>
             {#if y <= 600}
             <svg viewbox="0 0 100 1">
-                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal" stroke-dasharray=100 stroke-width=0.2/>
+                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
             </svg>
             {/if}
             <div class="socials">
@@ -71,6 +71,9 @@
 <Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 <div class="card">
     <h1>LANGUAGES AND FRAMEWORKS</h1>
+    <svg viewbox="0 0 100 1">
+		<line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
+	</svg>
     <div class="languages">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" width=33% alt="python">
         <img src="https://eu-images.contentstack.com/v3/assets/blt66983808af36a8ef/blt7d6dd0195aec2967/614b535dd8068d7efec4da52/Java_logo.png?quality=80&format=jpg&width=640" width=33% alt="java">
@@ -255,5 +258,22 @@ img {
     transform:scale(100%);
     }
 }
+
+.lines {
+		opacity: 1;
+		stroke-dasharray:100;
+		stroke-dashoffset: 100;
+        stroke-width: 1;
+	}
+
+ .card:hover .lines {
+    animation: dash 1s linear forwards;
+ }
+
+	@keyframes dash {
+  	to {
+   		stroke-dashoffset: 0;
+  		}
+	}
 
 </style>

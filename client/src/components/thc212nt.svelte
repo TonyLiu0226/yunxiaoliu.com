@@ -24,7 +24,7 @@
     <div class="THC212NT">
         <h1>Tahsin Hasan's CPEN 212 Note Transcriber</h1>
         <svg viewbox="0 0 100 1">
-            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal" stroke-dasharray=100 stroke-width=0.3/>
+            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
         </svg>
         <div class="flex">
             <div class="desc">
@@ -53,7 +53,7 @@
                 </ol>
             
             <svg viewbox="0 0 100 1">
-                <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="green" stroke-dasharray=70 stroke-width=0.15/>
+                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="green"/>
             </svg>
             <h3>What I learned from this project</h3>
             <p>The main thing we as a group learned from this project was how to break down a large project into pieces, then testing and integrating each piece
@@ -63,7 +63,7 @@
                 this project was to be completed in a time frame of around 2-3 weeks. 
             </p>
             <svg viewbox="0 0 100 1">
-                <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="green" stroke-dasharray=70 stroke-width=0.15/>
+                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="green"/>
             </svg>
             <h3>Technologies and frameworks used</h3>
             <ul>
@@ -78,15 +78,15 @@
             </ul>
             </div>
         </div>
-        <!-- insert try out links here (github, devpost, youtube demos) -->
+
         <svg viewbox="0 0 100 1">
-            <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="red" stroke-dasharray=70 stroke-width=0.15/>
+            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="red"/>
         </svg>
         <div class="tryout">
             <a href="https://github.com/TonyLiu0226/note_transcriber" target="_blank"><i class="fa fa-github"></i></a>
         </div>
         <svg viewbox="0 0 100 1">
-            <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="purple" stroke-dasharray=70 stroke-width=0.15/>
+            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="purple"/>
         </svg>
         <h3>IMAGE GALLERY</h3>
         <div class="gallery">
@@ -249,5 +249,22 @@ a:hover {
     transform:translateY(0px);
     transform:scale(100%);
 }
+}
+
+.lines {
+		opacity: 1;
+		stroke-dasharray:100;
+		stroke-dashoffset: 100;
+        stroke-width: 1;
+	}
+
+ .card:hover .lines {
+    animation: dash 1s linear forwards;
+ }
+
+@keyframes dash {
+to {
+   	stroke-dashoffset: 0;
+  	}
 }
 </style>

@@ -9,7 +9,7 @@
     <div class="rickyboi">
         <h1>Rickyboi</h1>
         <svg viewbox="0 0 100 1">
-            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal" stroke-dasharray=100 stroke-width=0.3/>
+            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
         </svg>
         <div class="flex">
             <div class="desc">
@@ -20,7 +20,7 @@
                 to make them more fun and interactive.
             </p>
             <svg viewbox="0 0 100 1">
-                <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="green" stroke-dasharray=70 stroke-width=0.15/>
+                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="green"/>
             </svg>
             <h3>What I learned from this project</h3>
             <p>I learned many things, from reviewing my knowledge of python (I haven't coded much with it before this project since early in
@@ -30,7 +30,7 @@
                 version control, and the repository for this project was my first repository on my GitHub.)
             </p>
             <svg viewbox="0 0 100 1">
-                <line class="lines" x1="15" y1="0" x2="85" y2="0" stroke="green" stroke-dasharray=70 stroke-width=0.15/>
+                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="green"/>
             </svg>
             <h3>Technologies and frameworks used</h3>
             <ul>
@@ -41,7 +41,12 @@
             </div>
         </div>
         <!-- insert try out links here (github, devpost, youtube demos) -->
-        <a href="https://github.com/TonyLiu0226/Rickyboi" target="_blank"><i class="fa fa-github"></i></a>
+        <svg viewbox="0 0 100 1">
+            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="red"/>
+        </svg>
+        <div class="tryout">
+            <a href="https://github.com/TonyLiu0226/Rickyboi" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
     </div>
 </div>
 
@@ -122,6 +127,14 @@ a:hover {
     color:#fff;
 }
 
+.tryout {
+    display:flex;
+    margin-top:5px;
+    margin-bottom:15px;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
 @media only screen and (max-width: 600px) {
     .card {
     background-color:rgba(8,8,8,0.5);
@@ -143,6 +156,23 @@ a:hover {
     transform:translateY(0px);
     transform:scale(100%);
 }
+}
+
+.lines {
+		opacity: 1;
+		stroke-dasharray:100;
+		stroke-dashoffset: 100;
+        stroke-width: 1;
+	}
+
+ .card:hover .lines {
+    animation: dash 1s linear forwards;
+ }
+
+@keyframes dash {
+to {
+   	stroke-dashoffset: 0;
+  	}
 }
 
 </style>
