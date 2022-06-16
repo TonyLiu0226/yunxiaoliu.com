@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import anime from 'animejs';
     import Saos from "saos";
+    import { fade, slide, scale } from 'svelte/transition';
     anime({
         targets: '.square',
         translatex: 250,
@@ -10,6 +11,15 @@
         loop: true
     });
     let y = 0;
+    const titles = ['Computer Engineering Student', 'Web Developer', 'Aspiring Software Engineer', 'He/him'];
+    let title = "dude";
+    let i = 0;
+    
+    const Timeout = setInterval(changeTitle, 5000);
+    function changeTitle() {
+        i++;
+        title = titles[i % 4];
+    }
 </script>
 
 <svelte:window bind:innerWidth={y}/>
@@ -18,6 +28,9 @@
 <div class='card'>
     <div class="about-me">
         <h1>Yunxiao Liu</h1>
+        <div class="titles" on:click={changeTitle}>
+            <p>{title}</p>
+        </div>
         <svg viewbox="0 0 100 1">
             <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
         </svg>
