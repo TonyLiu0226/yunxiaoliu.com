@@ -29,7 +29,7 @@
     <div class="about-me">
         <h1>Yunxiao Liu</h1>
         <div class="titles" on:click={changeTitle}>
-            <p>{title}</p>
+            <p class="changing-title">{title}</p>
         </div>
         <svg viewbox="0 0 100 1">
             <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
@@ -283,10 +283,38 @@ img {
     animation: dash 1s linear forwards;
  }
 
+ .titles {
+    overflow: hidden;
+ }
+
+ .changing-title {
+    transform: translateY(100%);
+    animation: my-animation 5000ms ease-in-out infinite;
+    color: teal;
+    font-family: "Ubuntu", sans-serif;
+    font-size: clamp(15px, 2vw, 20px);
+    }
+ 
+
 	@keyframes dash {
   	to {
    		stroke-dashoffset: 0;
   		}
 	}
+
+    @keyframes my-animation {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
 
 </style>
