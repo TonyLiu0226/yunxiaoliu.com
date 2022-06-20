@@ -3,6 +3,7 @@
     import anime from 'animejs';
     import Saos from "saos";
     import { fade, slide, scale } from 'svelte/transition';
+import { select_option } from 'svelte/internal';
     anime({
         targets: '.square',
         translatex: 250,
@@ -16,9 +17,23 @@
     let i = 0;
     
     const Timeout = setInterval(changeTitle, 5000);
+    var transition = null;
     function changeTitle() {
-        i++;
-        title = titles[i % 4];
+        var t = document.getElementsByClassName('changing-title')[0];
+        var pos = 100;
+        transition = setInterval(moveTitle, 25);
+        function moveTitle() {
+            if (pos == 0) {
+                i++;
+                title = titles[i % 4];
+                clearInterval(transition);
+            }
+            else {
+                pos--;
+                t.style.opacity = pos/100;
+            }
+        }
+        
     }
 </script>
 
@@ -28,7 +43,7 @@
 <div class='card'>
     <div class="about-me">
         <h1>Yunxiao Liu</h1>
-        <div class="titles" on:click={changeTitle}>
+        <div class="titles">
             <p class="changing-title">{title}</p>
         </div>
         <svg viewbox="0 0 100 1">
@@ -288,12 +303,15 @@ img {
  }
 
  .changing-title {
-    transform: translateY(100%);
-    animation: my-animation 5000ms ease-in-out infinite;
     color: teal;
     font-family: "Ubuntu", sans-serif;
     font-size: clamp(15px, 2vw, 20px);
     }
+
+.changing-title.horizTranslate {
+    transition: 1000ms;
+    margin-bottom: 100% !important;
+}
  
 
 	@keyframes dash {
