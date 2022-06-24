@@ -56,6 +56,8 @@
 .card {
     background-color:rgba(8,8,8,0.5);
     border:5px;
+    border-color: teal;
+    border-width: 2px;
     border-radius: 10px;
     width: 80%;
     margin-left: 10%;

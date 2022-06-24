@@ -233,6 +233,8 @@ a:hover {
     background-color:rgba(8,8,8,0.5);
     border:5px;
     border-radius: 10px;
+    border-color: teal;
+    border-width: 2px;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
