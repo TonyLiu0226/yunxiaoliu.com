@@ -71,7 +71,7 @@
 	<div class="visual">
 		<button class="visualButton">Play</button>
 		<audio controls>
-			<source src="static/TS.mp3" type="audio/mpeg">
+			<source src="https://github.com/TonyLiu0226/yunxiaoliu.com/blob/master/TS.mp3?raw=true" type="audio/mpeg">
 		</audio>
 	</div>
 </main>
