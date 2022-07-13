@@ -101,17 +101,14 @@
 		z-index:1;
 		}
 	}
+	
+	
 	.visual {
-		visibility: hidden;
-	}
-
-	@media (min-width: 602px) {
-		.visual {
-			visibility:visible;
-			transition: transform 500ms ease-in-out;
-			padding-top: 10px;
-			padding-bottom: 50px;
-		}
+		visibility:visible;
+		transition: transform 500ms ease-in-out;
+		padding-top: 10px;
+		padding-bottom: 50px;
+		
 	}
 
 	.visualButton {
