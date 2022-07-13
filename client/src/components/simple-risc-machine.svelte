@@ -122,7 +122,7 @@ a {
 }
 
 a:hover {
-    background-color:blue;
+    background-color:teal;
     color:#fff;
 }
 

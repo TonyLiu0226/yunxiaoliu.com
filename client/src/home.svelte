@@ -205,7 +205,7 @@ a {
 }
 
 a:hover {
-    background-color:navy;
+    background-color:teal;
     color:white;
 }
 

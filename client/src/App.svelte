@@ -5,12 +5,23 @@
 	import {isHome, isProjects, isNotes, isPhotos, isBlogs } from "./stores.js";
 	import { fade, slide, scale } from 'svelte/transition';
 	let num = -1;
+	let isPlaying = false;
 	const names = ["XQC", "Dream", "SkyDoesMinecraft", "TechLead", "JomaTech",
 "Snoop Dogg", "IDUBBBZTV", "Cookiezi", "Vaxei", "Bruh"];
 	function getRand() {
 		fetch ("./rand")
 		.then(d => d.text())
 		.then(d => (num = names[d]));
+	}
+
+	function play() {
+		if (!isPlaying) {
+			document.getElementById('audioFile').play();
+		}
+		else {
+			document.getElementById('audioFile').pause();
+		}
+		isPlaying = !isPlaying;
 	}
 
 	let home, projects, notes, photos, blogs;
@@ -69,8 +80,8 @@
 	</div>
 	{/if}
 	<div class="visual">
-		<button class="visualButton">Play</button>
-		<audio controls>
+		<button class="visualButton" on:click={play}>{isPlaying ? "||" : "▷"}</button>
+		<audio id="audioFile">
 			<source src="https://github.com/TonyLiu0226/yunxiaoliu.com/blob/master/TS.mp3?raw=true" type="audio/mpeg">
 		</audio>
 	</div>
@@ -115,17 +126,20 @@
 		padding: 10px 30px;
 		cursor:pointer;
 		transition: transform 250ms ease-in-out;
-		background-color: teal;
-		color: #fff;
-		border: 1px solid;
-		border-radius: 5px;
-		border-color: #fff;
+		background-color: transparent;
+		color: teal;
 		font-family: 'Ubuntu', sans-serif;
-		font-size: 24px;
+		font-size: 36px;
+		border:none;
 	}
 
 	.visualButton:hover {
 		transform:scale(107.5%);
+	}
+
+	.visualButton:active {
+		color: teal;
+		background-color:transparent;
 	}
 
 	.nav {
