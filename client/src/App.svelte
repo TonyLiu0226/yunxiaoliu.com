@@ -69,16 +69,10 @@
 	</div>
 	{/if}
 	<div class="visual">
-		<!-- <svg xmlns="http://www.w3.org/2000/svg" width="602" height="302" fill="none" viewBox="0 0 602 302">
-			<g class="Frame-1">
-		  		<circle cx="151" cy="151" r="150.5" fill="#FEF1D8" stroke="#000" class="base1"/>
-		  		<circle cx="451" cy="151" r="150.5" fill="#FEF1D8" stroke="#000" class="base2"/>
-		  		<ellipse cx="151.5" cy="151" fill="#FE5775" class="c1" rx="14.5" ry="20"/>
-		  		<ellipse cx="450.5" cy="151" fill="#FE5775" class="c2" rx="14.5" ry="20"/>
-		  		<path fill="#D9D9D9" stroke="#000" d="M155.5 151a4.5 4.5 0 0 1-4.5 4.5c-2.149 0-3.638-1.534-3.942-3.671 1.276.608 2.323 1.025 3.176 1.28 1.008.302 1.803.395 2.407.262.312-.069.582-.2.797-.402.215-.202.349-.45.426-.714.146-.508.086-1.104-.036-1.673-.124-.58-.331-1.204-.541-1.795-.065-.185-.131-.365-.194-.542a29.485 29.485 0 0 1-.391-1.122c-.163-.517-.236-.876-.221-1.084l.004-.039h.015c.604 0 1.07.148 1.438.389.37.243.669.599.903 1.054.476.925.659 2.205.659 3.557Zm-3.055-4.995.002-.001-.002.001Z" class="n1"/>
-		  		<path fill="#D9D9D9" stroke="#000" d="M446.5 151a4.5 4.5 0 0 1 4.5-4.5c2.149 0 3.638 1.534 3.942 3.671-1.276-.608-2.323-1.025-3.176-1.28-1.008-.302-1.803-.395-2.407-.262-.312.069-.582.2-.797.402-.215.202-.349.45-.426.714-.146.508-.086 1.104.036 1.673.124.58.331 1.204.541 1.795.065.185.131.365.194.542.145.399.281.775.391 1.122.163.517.236.876.221 1.084l-.004.039h-.015c-.604 0-1.07-.148-1.438-.389-.37-.243-.669-.599-.903-1.054-.476-.925-.659-2.205-.659-3.557Zm3.055 4.995-.002.001.002-.001Z" class="n2"/>
-			</g>
-	  	</svg> -->
+		<button class="visualButton">Play</button>
+		<audio controls>
+			<source src="static/TS.mp3" type="audio/mpeg">
+		</audio>
 	</div>
 </main>
 
@@ -117,12 +111,26 @@
 			transition: transform 500ms ease-in-out;
 			padding-top: 10px;
 			padding-bottom: 50px;
-			}
-
-		.visual:hover {
-			transform: scale(120%);
 		}
 	}
+
+	.visualButton {
+		padding: 10px 30px;
+		cursor:pointer;
+		transition: transform 250ms ease-in-out;
+		background-color: teal;
+		color: #fff;
+		border: 1px solid;
+		border-radius: 5px;
+		border-color: #fff;
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 24px;
+	}
+
+	.visualButton:hover {
+		transform:scale(107.5%);
+	}
+
 	.nav {
 		top:0px;
 		position:sticky;
