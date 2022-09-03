@@ -74,7 +74,7 @@ import { select_option } from 'svelte/internal';
             <div class="resume">
                 <h1>My resume</h1>
                 <div class="btn-row">
-                    <a href="https://drive.google.com/file/d/1NVbkS19h9TuKVyNIhkp1MdNBIe0BNJAJ/view?usp=sharing" target="_blank"><i class="fa fa-file"></i></a>
+                    <a href="https://drive.google.com/file/d/11h88W9Kqrpe6_Nj6odi7Mj4TmfnPBmKQ/view?usp=sharing" target="_blank"><i class="fa fa-file"></i></a>
                 </div>
             </div>
             {#if y <= 600}
