@@ -2,7 +2,7 @@
 	import Navbar from "./components/nav.svelte";
 	import Home from "./home.svelte";
 	import Projects from "./projects.svelte"
-	import {isHome, isProjects, isNotes, isPhotos, isBlogs } from "./stores.js";
+	import {isHome, isProjects, isNotes, isBlogs } from "./stores.js";
 	import { fade, slide, scale } from 'svelte/transition';
 	let num = -1;
 	let isPlaying = false;
@@ -24,7 +24,7 @@
 		isPlaying = !isPlaying;
 	}
 
-	let home, projects, notes, photos, blogs;
+	let home, projects, notes, blogs;
 
 	isHome.subscribe (value => {
 		home = value;
@@ -34,9 +34,6 @@
 	});
 	isNotes.subscribe (value => {
 		notes = value;
-	});
-	isPhotos.subscribe (value => {
-		photos = value;
 	});
 	isBlogs.subscribe (value => {
 		blogs = value;
@@ -67,11 +64,6 @@
 			<li>CPEN 221</li>
 			<li>STAT 302</li>
 		</ul>
-	</div>
-	{/if}
-	{#if photos}
-	<div in:slide out:fade>
-		<img src="https://i.ytimg.com/vi/YDj3JHtIviQ/maxresdefault.jpg" width=100% alt="sus"/>
 	</div>
 	{/if}
 	{#if blogs}

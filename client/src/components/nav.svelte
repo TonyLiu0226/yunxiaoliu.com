@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import {isHome, isProjects, isNotes, isPhotos, isBlogs } from "../stores.js";
+    import {isHome, isProjects, isNotes, isBlogs } from "../stores.js";
     // Show mobile icon and display menu
     let showMobileMenu = false;
   
@@ -22,7 +22,7 @@
       mediaListener.addListener(mediaQueryHandler);
     });
 
-  let home, projects, notes, photos, blogs;
+  let home, projects, notes, blogs;
 
 	isHome.subscribe (value => {
 		home = value;
@@ -33,56 +33,48 @@
 	isNotes.subscribe (value => {
 		notes = value;
 	});
-	isPhotos.subscribe (value => {
-		photos = value;
-	});
 	isBlogs.subscribe (value => {
 		blogs = value;
 	});
 
     //button functions to write to each variable
     function h() {
-      home = true; photos = false; projects = false; notes = false; blogs = false;
+      home = true; projects = false; notes = false; blogs = false;
       isHome.set(home);
       isProjects.set(projects);
       isNotes.set(notes);
-      isPhotos.set(photos);
       isBlogs.set(blogs);
     }
     //button functions to write to each variable
     function p() {
-      home = false; photos = false; projects = true; notes = false; blogs = false;
+      home = false; projects = true; notes = false; blogs = false;
       isHome.set(home);
       isProjects.set(projects);
       isNotes.set(notes);
-      isPhotos.set(photos);
       isBlogs.set(blogs);
     }
     //button functions to write to each variable
     function n() {
-      home = false; photos = false; projects = false; notes = true; blogs = false;
+      home = false; projects = false; notes = true; blogs = false;
       isHome.set(home);
       isProjects.set(projects);
       isNotes.set(notes);
-      isPhotos.set(photos);
       isBlogs.set(blogs);
     }
     //button functions to write to each variable
     function ph() {
-      home = false; photos = true; projects = false; notes = false; blogs = false;
+      home = false; projects = false; notes = false; blogs = false;
       isHome.set(home);
       isProjects.set(projects);
       isNotes.set(notes);
-      isPhotos.set(photos);
       isBlogs.set(blogs);
     }
     //button functions to write to each variable
     function b() {
-      home = false; photos = false; projects = false; notes = false; blogs = true;
+      home = false; projects = false; notes = false; blogs = true;
       isHome.set(home);
       isProjects.set(projects);
       isNotes.set(notes);
-      isPhotos.set(photos);
       isBlogs.set(blogs);
     }
 
@@ -103,9 +95,6 @@
       </li>
       <li>
         <button on:click={n} class={`button${notes ? '  active' : ''}`}>Notes</button>
-      </li>
-      <li>
-        <button on:click={ph} class={`button${photos ? '  active' : ''}`}>Photos</button>
       </li>
       <li>
         <button on:click={b} class={`button${blogs ? '  active' : ''}`}>Blogs</button>
