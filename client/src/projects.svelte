@@ -4,7 +4,12 @@
     import SRM from './components/simple-risc-machine.svelte';
     import UniMeetups from './components/unimeetups.svelte';
     import Saos from "saos";
+    let y = 0;
 </script>
+
+<svelte:window bind:innerWidth={y}/>
+
+{#if y > 600}
 <div class="project-list">
 <Saos 
 animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
@@ -23,6 +28,14 @@ animation={'fade-in2 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 <UniMeetups></UniMeetups>
 </Saos>
 </div>
+{:else}
+<div class="project-list">
+  <Rickyboi></Rickyboi>
+  <THC212NT></THC212NT>
+  <SRM></SRM>
+  <UniMeetups></UniMeetups>
+  </div>
+{/if}
 
 <style>
     .project-list {

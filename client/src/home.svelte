@@ -1,9 +1,6 @@
 <script>
-    import { onMount } from 'svelte';
     import anime from 'animejs';
     import Saos from "saos";
-    import { fade, slide, scale } from 'svelte/transition';
-import { select_option } from 'svelte/internal';
     anime({
         targets: '.square',
         translatex: 250,
@@ -39,6 +36,34 @@ import { select_option } from 'svelte/internal';
 
 <svelte:window bind:innerWidth={y}/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+{#if y <= 600}
+<div class='card'>
+    <div class="about-me">
+        <h1>Yunxiao Liu</h1>
+        <div class="titles">
+            <p class="changing-title">{title}</p>
+        </div>
+        <svg viewbox="0 0 100 1">
+            <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
+        </svg>
+        <div class="flex">
+            <div class="image">
+                <img src="https://media-exp1.licdn.com/dms/image/C5603AQHfWwVl0jyWOQ/profile-displayphoto-shrink_400_400/0/1660024199360?e=1667433600&v=beta&t=LtFgdKrdGBM4Ph8eW4hhN52xC9LTvNtHKBcqoru2vHM" alt="pfp" width=100%/>
+            </div>
+            <div class="desc">
+            <p>Hello, I am a second year Computer Engineering student at the University of British Columbia,
+                hoping to focus on Software Engineering. I enjoy programming during my spare time, with numerous
+                side projects such as Rickyboi (my discord bot) and UniMeetups (a simple web app designed for
+                university students to connect and make friends). Specifically, over the past few months, my
+                interests have shifted towards web development, and this website (still a work in progress lol) is just a small 
+                part of my growing passion. I am in the co-op program, and am currently seeking a winter 2023 internship, so if 
+                y'all got any tips or tricks, hmu (contact info just below).
+            </p>
+            </div>
+        </div>
+    </div>
+</div>
+{:else}
 <Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 <div class='card'>
     <div class="about-me">
@@ -67,6 +92,36 @@ import { select_option } from 'svelte/internal';
     </div>
 </div>
 </Saos>
+{/if}
+{#if y <= 600}
+<div class='card'>
+    <div class="contact">
+        <div class="flex">
+            <div class="resume">
+                <h1>My resume</h1>
+                <div class="btn-row">
+                    <a href="https://drive.google.com/file/d/11h88W9Kqrpe6_Nj6odi7Mj4TmfnPBmKQ/view?usp=sharing" target="_blank"><i class="fa fa-file"></i></a>
+                </div>
+            </div>
+            {#if y <= 600}
+            <svg viewbox="0 0 100 1">
+                <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
+            </svg>
+            {/if}
+            <div class="socials">
+                <h1>Contact Me</h1>
+                <div class="btn-row">
+                <a href="https://www.linkedin.com/in/yunxiaotonyliu/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/TonyLiu0226" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.instagram.com/tony_26l/?hl=en/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCYLZDU2vS-FeL1E2YaWrG3w" target="_blank"><i class="fa fa-youtube"></i></a>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{:else}
 <Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 <div class='card'>
     <div class="contact">
@@ -96,6 +151,26 @@ import { select_option } from 'svelte/internal';
     </div>
 </div>
 </Saos>
+{/if}
+{#if y <= 600}
+<div class="card">
+    <h1>LANGUAGES AND FRAMEWORKS</h1>
+    <svg viewbox="0 0 100 1">
+		<line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
+	</svg>
+    <div class="languages">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" width=33% alt="python">
+        <img src="https://eu-images.contentstack.com/v3/assets/blt66983808af36a8ef/blt7d6dd0195aec2967/614b535dd8068d7efec4da52/Java_logo.png?quality=80&format=jpg&width=640" width=33% alt="java">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png" width=33% alt="c">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width=33% alt="javascript">
+        <img src="https://myiotmart.files.wordpress.com/2016/07/verilog.jpg" width=33% alt="verilog">
+        <img src="https://www.logolynx.com/images/logolynx/00/00429ca224699ddf60ce05b46ef08709.jpeg" width=33% alt="flask">
+        <img src="https://pbs.twimg.com/profile_images/1121395911849062400/7exmJEg4_400x400.png" width=33% alt="svelte">
+        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" width=33% alt="react">
+        <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-mongodb/events/mon.png" width=33% alt="mongodb">
+    </div>
+</div>
+{:else}
 <Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 <div class="card">
     <h1>LANGUAGES AND FRAMEWORKS</h1>
@@ -115,6 +190,7 @@ import { select_option } from 'svelte/internal';
     </div>
 </div>
 </Saos>
+{/if}
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@300&family=Ubuntu:wght@300;400&display=swap');
 @keyframes -global-fade-in {
