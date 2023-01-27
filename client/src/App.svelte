@@ -2,6 +2,7 @@
 	import Navbar from "./components/nav.svelte";
 	import Home from "./home.svelte";
 	import Projects from "./projects.svelte"
+	import Notes from "./notes.svelte"
 	import {isHome, isProjects, isNotes, isBlogs } from "./stores.js";
 	import { fade, slide, scale } from 'svelte/transition';
 	let num = -1;
@@ -56,14 +57,7 @@
 	{/if}
 	{#if notes}
 	<div in:slide out:fade>
-		<h1>LIST OF COURSES:</h1>
-		<br>
-		<ul>
-			<li>CPEN 211</li>
-			<li>CPEN 212</li>
-			<li>CPEN 221</li>
-			<li>STAT 302</li>
-		</ul>
+		<Notes></Notes>
 	</div>
 	{/if}
 	{#if blogs}

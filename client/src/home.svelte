@@ -79,12 +79,12 @@
                 <img src="https://media-exp1.licdn.com/dms/image/C5603AQHfWwVl0jyWOQ/profile-displayphoto-shrink_400_400/0/1660024199360?e=1667433600&v=beta&t=LtFgdKrdGBM4Ph8eW4hhN52xC9LTvNtHKBcqoru2vHM" alt="pfp" width=100%/>
             </div>
             <div class="desc">
-            <p>Hello, I am a second year Computer Engineering student at the University of British Columbia,
+            <p>Hello, I am a third year Computer Engineering student at the University of British Columbia,
                 hoping to focus on Software Engineering. I enjoy programming during my spare time, with numerous
                 side projects such as Rickyboi (my discord bot) and UniMeetups (a simple web app designed for
                 university students to connect and make friends). Specifically, over the past few months, my
                 interests have shifted towards web development, and this website (still a work in progress lol) is just a small 
-                part of my growing passion. I am in the co-op program, and am currently seeking a winter 2023 internship, so if 
+                part of my growing passion. I am in the co-op program, and am currently seeking a summer 2023 internship, so if 
                 y'all got any tips or tricks, hmu (contact info just below).
             </p>
             </div>
