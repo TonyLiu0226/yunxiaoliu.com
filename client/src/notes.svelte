@@ -4,28 +4,36 @@
 
     let courses = [
     {name: 'PHIL 120', 
-    courseURL: 'https://docs.google.com/document/d/1ye6sDL1mwvS4o5HaxwfwCjrwI_KAlN9tJJIgQy0ePqU/edit?usp=sharing'
+    courseURL: 'https://docs.google.com/document/d/1ye6sDL1mwvS4o5HaxwfwCjrwI_KAlN9tJJIgQy0ePqU/edit?usp=sharing',
+    key: 1
     }, 
     {name: 'CPSC 221', 
-    courseURL: 'https://cultured-waitress-af5.notion.site/CPSC-221-b3168cc5490f4222b169a1ae6e3a2d0c'
+    courseURL: 'https://cultured-waitress-af5.notion.site/CPSC-221-b3168cc5490f4222b169a1ae6e3a2d0c',
+    key: 0
     },
     {name: 'CPEN 311', 
-    courseURL: 'https://cultured-waitress-af5.notion.site/CPEN-311-8e3d245c606b42f79bc27766e2783b20'
+    courseURL: 'https://cultured-waitress-af5.notion.site/CPEN-311-8e3d245c606b42f79bc27766e2783b20',
+    key: 1
     },
     {name: 'CPEN 331', 
-    courseURL: 'https://cultured-waitress-af5.notion.site/CPEN-331-dec0ba5a2e4e4391a37a9b35bba8d2c2'
+    courseURL: 'https://cultured-waitress-af5.notion.site/CPEN-331-dec0ba5a2e4e4391a37a9b35bba8d2c2',
+    key: 0
     },
     {name: 'STAT 302',
-    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    key: 1
     },
     {name: 'CPEN 212',
-    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    key: 0
     },
     {name: 'CPEN 221',
-    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    key: 1
     },
     {name: 'CPEN 211',
-    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    key: 0
     },
     ];
 </script>
@@ -45,8 +53,8 @@
     </div>
     {/each}
 {:else}
-<Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
     {#each courses as course}
+    <Saos animation={course.key == 1 ? 'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both' : 'fade-in2 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
     <div class="card">
         <h1>{course.name}</h1>
         <svg viewbox="0 0 100 1">
@@ -56,8 +64,9 @@
             <a href={course.courseURL} target="_blank"><i class="fa fa-file fa-5x"></i></a>
         </div>
     </div>
+    </Saos>
     {/each}
-</Saos>
+
 {/if}
 
 <style>
