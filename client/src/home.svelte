@@ -48,7 +48,7 @@
         </svg>
         <div class="flex">
             <div class="image">
-                <img src="./images/pfp-zoomed.png" alt="pfp" width=100%/>
+                <img src="images/pfp-zoomed.png" alt="pfp" width=100%/>
             </div>
             <div class="desc">
             <p>Hello, I am a third year Computer Engineering student at the University of British Columbia,
