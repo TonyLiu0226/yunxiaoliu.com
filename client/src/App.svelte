@@ -61,8 +61,8 @@
 	</div>
 	{/if}
 	{#if blogs}
-	<div transition:fade>
-		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MY BLOGS</a>
+	<div transition:fade style="margin-top: 90px">
+		<a href="https://thecpener.vercel.app">MY BLOGS</a>
 	</div>
 	{/if}
 	<div class="visual">
