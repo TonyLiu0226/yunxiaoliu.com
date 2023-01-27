@@ -159,15 +159,18 @@
 		<line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
 	</svg>
     <div class="languages">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" width=33% alt="python">
-        <img src="https://eu-images.contentstack.com/v3/assets/blt66983808af36a8ef/blt7d6dd0195aec2967/614b535dd8068d7efec4da52/Java_logo.png?quality=80&format=jpg&width=640" width=33% alt="java">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png" width=33% alt="c">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width=33% alt="javascript">
-        <img src="https://myiotmart.files.wordpress.com/2016/07/verilog.jpg" width=33% alt="verilog">
-        <img src="https://www.logolynx.com/images/logolynx/00/00429ca224699ddf60ce05b46ef08709.jpeg" width=33% alt="flask">
-        <img src="https://pbs.twimg.com/profile_images/1121395911849062400/7exmJEg4_400x400.png" width=33% alt="svelte">
-        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" width=33% alt="react">
-        <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-mongodb/events/mon.png" width=33% alt="mongodb">
+        <img src="images/python.png" width=33% alt="python">
+        <img src="images/java.jpeg" width=33% alt="java">
+        <img src="images/c.png" width=33% alt="c">
+        <img src="images/cpp.png" width=33% alt="c++">
+        <img src="images/javascript.png" width=33% alt="javascript">
+        <img src="images/verilog.jpg" width=33% alt="verilog">
+        <img src="images/flask.jpeg" width=33% alt="flask">
+        <img src="images/svelte.png" width=33% alt="svelte">
+        <img src="images/react.png" width=33% alt="react">
+        <img src="images/next.png" width=33% alt="next.js">
+        <img src="images/mongodb.png" width=33% alt="mongodb">
+        <img src="images/graphql.png" width=33% alt="graphql">
     </div>
 </div>
 {:else}
@@ -178,15 +181,18 @@
 		<line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
 	</svg>
     <div class="languages">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" width=33% alt="python">
-        <img src="https://eu-images.contentstack.com/v3/assets/blt66983808af36a8ef/blt7d6dd0195aec2967/614b535dd8068d7efec4da52/Java_logo.png?quality=80&format=jpg&width=640" width=33% alt="java">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png" width=33% alt="c">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width=33% alt="javascript">
-        <img src="https://myiotmart.files.wordpress.com/2016/07/verilog.jpg" width=33% alt="verilog">
-        <img src="https://www.logolynx.com/images/logolynx/00/00429ca224699ddf60ce05b46ef08709.jpeg" width=33% alt="flask">
-        <img src="https://pbs.twimg.com/profile_images/1121395911849062400/7exmJEg4_400x400.png" width=33% alt="svelte">
-        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" width=33% alt="react">
-        <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-mongodb/events/mon.png" width=33% alt="mongodb">
+        <img src="images/python.png" width=33% alt="python">
+        <img src="images/java.jpeg" width=33% alt="java">
+        <img src="images/c.png" width=33% alt="c">
+        <img src="images/cpp.png" width=33% alt="c++">
+        <img src="images/javascript.png" width=33% alt="javascript">
+        <img src="images/verilog.jpg" width=33% alt="verilog">
+        <img src="images/flask.jpeg" width=33% alt="flask">
+        <img src="images/svelte.png" width=33% alt="svelte">
+        <img src="images/react.png" width=33% alt="react">
+        <img src="images/next.png" width=33% alt="next.js">
+        <img src="images/mongodb.png" width=33% alt="mongodb">
+        <img src="images/graphql.png" width=33% alt="graphql">
     </div>
 </div>
 </Saos>
