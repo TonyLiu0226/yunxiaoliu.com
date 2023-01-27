@@ -32,7 +32,7 @@
 
 <svelte:window bind:innerWidth={y}/>
 
-{#if y > 600}
+{#if y < 600}
     {#each courses as course}
     <div class="card">
         <h1>{course.name}</h1>
@@ -48,12 +48,12 @@
 <Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
     {#each courses as course}
     <div class="card">
-        <h1>{course}</h1>
+        <h1>{course.name}</h1>
         <svg viewbox="0 0 100 1">
 		    <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
 	    </svg>
         <div class="notes">
-            <a href={course.courseURL} target="_blank"><i class="fa fa-file"></i></a>
+            <a href={course.courseURL} target="_blank"><i class="fa fa-file fa-5x"></i></a>
         </div>
     </div>
     {/each}
