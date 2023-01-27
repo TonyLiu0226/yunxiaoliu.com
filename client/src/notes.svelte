@@ -1,45 +1,63 @@
 <script>
+    import Saos from "saos";
     let y = 0;
+
+    let courses = [
+    {name: 'PHIL 120', 
+    courseURL: 'https://docs.google.com/document/d/1ye6sDL1mwvS4o5HaxwfwCjrwI_KAlN9tJJIgQy0ePqU/edit?usp=sharing'
+    }, 
+    {name: 'CPSC 221', 
+    courseURL: 'https://cultured-waitress-af5.notion.site/CPSC-221-b3168cc5490f4222b169a1ae6e3a2d0c'
+    },
+    {name: 'CPEN 311', 
+    courseURL: 'https://cultured-waitress-af5.notion.site/CPEN-311-8e3d245c606b42f79bc27766e2783b20'
+    },
+    {name: 'CPEN 331', 
+    courseURL: 'https://cultured-waitress-af5.notion.site/CPEN-331-dec0ba5a2e4e4391a37a9b35bba8d2c2'
+    },
+    {name: 'STAT 302',
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    {name: 'CPEN 212',
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    {name: 'CPEN 221',
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    {name: 'CPEN 211',
+    courseURL: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    ];
 </script>
 
 <svelte:window bind:innerWidth={y}/>
 
 {#if y > 600}
-<div class="card">
-    <h1>LANGUAGES AND FRAMEWORKS</h1>
-    <svg viewbox="0 0 100 1">
-		<line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
-	</svg>
-    <div class="languages">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" width=33% alt="python">
-        <img src="https://eu-images.contentstack.com/v3/assets/blt66983808af36a8ef/blt7d6dd0195aec2967/614b535dd8068d7efec4da52/Java_logo.png?quality=80&format=jpg&width=640" width=33% alt="java">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png" width=33% alt="c">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width=33% alt="javascript">
-        <img src="https://myiotmart.files.wordpress.com/2016/07/verilog.jpg" width=33% alt="verilog">
-        <img src="https://www.logolynx.com/images/logolynx/00/00429ca224699ddf60ce05b46ef08709.jpeg" width=33% alt="flask">
-        <img src="https://pbs.twimg.com/profile_images/1121395911849062400/7exmJEg4_400x400.png" width=33% alt="svelte">
-        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" width=33% alt="react">
-        <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-mongodb/events/mon.png" width=33% alt="mongodb">
+    {#each courses as course}
+    <div class="card">
+        <h1>{course.name}</h1>
+        <svg viewbox="0 0 100 1">
+		    <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
+	    </svg>
+        <div class="notes">
+            <a href={course.courseURL} target="_blank"><i class="fa fa-file"></i></a>
+        </div>
     </div>
-</div>
+    {/each}
 {:else}
-<div class="card">
-    <h1>LANGUAGES AND FRAMEWORKS</h1>
-    <svg viewbox="0 0 100 1">
-		<line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
-	</svg>
-    <div class="languages">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" width=33% alt="python">
-        <img src="https://eu-images.contentstack.com/v3/assets/blt66983808af36a8ef/blt7d6dd0195aec2967/614b535dd8068d7efec4da52/Java_logo.png?quality=80&format=jpg&width=640" width=33% alt="java">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png" width=33% alt="c">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width=33% alt="javascript">
-        <img src="https://myiotmart.files.wordpress.com/2016/07/verilog.jpg" width=33% alt="verilog">
-        <img src="https://www.logolynx.com/images/logolynx/00/00429ca224699ddf60ce05b46ef08709.jpeg" width=33% alt="flask">
-        <img src="https://pbs.twimg.com/profile_images/1121395911849062400/7exmJEg4_400x400.png" width=33% alt="svelte">
-        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" width=33% alt="react">
-        <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-mongodb/events/mon.png" width=33% alt="mongodb">
+<Saos animation={'fade-in 1.0s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
+    {#each courses as course}
+    <div class="card">
+        <h1>{course}</h1>
+        <svg viewbox="0 0 100 1">
+		    <line class="lines" x1="0" y1="0" x2="100" y2="0" stroke="teal"/>
+	    </svg>
+        <div class="notes">
+            <a href={course.courseURL} target="_blank"><i class="fa fa-file"></i></a>
+        </div>
     </div>
-</div>
+    {/each}
+</Saos>
 {/if}
 
 <style>
@@ -72,10 +90,10 @@ h1{
     font-size: clamp(32px, 4vw, 48px);
 }
 
-p{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
+.notes {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -83,13 +101,6 @@ p{
     font-family: 'Ubuntu', sans-serif;
     font-size: clamp(26px, 6vw, 36px);
     }
-
-    p{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    }
-
     .card {
     background-color:rgba(8,8,8,0.5);
     border:5px;
