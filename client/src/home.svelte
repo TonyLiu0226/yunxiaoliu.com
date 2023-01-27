@@ -76,7 +76,7 @@
         </svg>
         <div class="flex">
             <div class="image">
-                <img src="https://media-exp1.licdn.com/dms/image/C5603AQHfWwVl0jyWOQ/profile-displayphoto-shrink_400_400/0/1660024199360?e=1667433600&v=beta&t=LtFgdKrdGBM4Ph8eW4hhN52xC9LTvNtHKBcqoru2vHM" alt="pfp" width=100%/>
+                <img src="images/pfp-zoomed.png" alt="pfp" width=100%/>
             </div>
             <div class="desc">
             <p>Hello, I am a third year Computer Engineering student at the University of British Columbia,
